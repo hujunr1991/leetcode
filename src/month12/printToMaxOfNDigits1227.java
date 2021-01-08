@@ -7,7 +7,7 @@ public class printToMaxOfNDigits1227 {
      * 首先计算出n位数的最大十进制数，然后利用循环输出从1到最大的n位数
      * @param n
      */
-    public void printToMaxOfNDigits(int n){
+    public static void printToMaxOfNDigits(int n){
         long number = 1;
         int i = 0;
         while(i < n){ //利用while循环计算出比n位十进制多1的数
@@ -29,7 +29,7 @@ public class printToMaxOfNDigits1227 {
      * 首先我们把字符串中的每一个数字都初始化为‘0’，然后每一次为字符串表示的数字加1，再打印出来。
      * 故我们只需要做两件事：一是在字符串表达数字上模拟加法，二是把字符串表达的数字打印出来。
      */
-    public void printToMaxOfDigitsTwo(int n){
+    public static void printToMaxOfDigitsTwo(int n){
         if(n <= 0){
             System.out.println("输入的n没有意义");
             return;
@@ -45,7 +45,7 @@ public class printToMaxOfNDigits1227 {
     }
 
     //自加
-    private boolean incrementNumber(char[] number) {
+    private static boolean incrementNumber(char[] number) {
         boolean isOverflow = false; //判断是否溢出
         int nTakeOver = 0; //判断是否进位
         int nLength = number.length;
@@ -71,7 +71,7 @@ public class printToMaxOfNDigits1227 {
     }
 
     //打印数字
-    private void printNumber(char[] number) {
+    private static void printNumber(char[] number) {
         boolean isBeginning0 = true;
         int nLength = number.length;
         for (int i = 0; i < nLength; ++i) {
@@ -91,7 +91,7 @@ public class printToMaxOfNDigits1227 {
      */
 
     //打印1到最大的n位数的主方法
-    public void printToMaxOfDigits(int n){
+    public static void printToMaxOfDigits(int n){
         if(n <= 0){
             System.out.println("输入的n没有意义");
             return;
@@ -106,7 +106,7 @@ public class printToMaxOfNDigits1227 {
         }
     }
     //利用递归实现1到最大的n位数的全排列
-    public void printToMaxOfNDigitsRecursively(char[] number, int n, int index) {
+    public static void printToMaxOfNDigitsRecursively(char[] number, int n, int index) {
         if(index == n - 1){
             printNumber(number);
             return;
@@ -120,4 +120,9 @@ public class printToMaxOfNDigits1227 {
     /**
      * https://blog.csdn.net/u013132035/article/details/80563507
      */
+
+    public static void main(String[] args) {
+//        printToMaxOfNDigits(3);
+        printToMaxOfDigitsTwo(3);
+    }
 }
