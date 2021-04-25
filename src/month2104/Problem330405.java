@@ -45,6 +45,7 @@ public class Problem330405 {
 
     }
 
+    //比较字符串的大小
     private boolean isSmall(String m, String n) {
         String left = m + n;
         String right = n + m;

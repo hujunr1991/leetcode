@@ -3,7 +3,7 @@ package month2104;
 import java.util.LinkedHashMap;
 
 /**
- *第一个只出现一次的字符
+ *第一个只出现一次的字符，空间换时间
  */
 public class Problem350406 {
 
